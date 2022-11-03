@@ -1,0 +1,151 @@
+/* Author: David Bouzas Morales */
+
+/* Diseño para celulares
+#columna1, #columna2, #columna3 {
+	float:none;
+	width:100%;
+}
+
+/* Diseño para tabletas 
+@media screen and (min-width: 800px) {
+	#columna1, #columna2 {
+		float:left;
+		width:50%;
+	}
+}
+
+/* Diseño para PC 
+@media screen and (min-width: 1025px) {
+	#columna1, #columna2, #columna3 {
+	float:left;
+	width:33%;
+}*/
+
+body{
+	padding-bottom: 10em;
+	background: lightblue;
+	width: 95%;
+	font-family:Verdana,Arial, serif;
+	margin: 0 auto;
+}
+
+h1{
+	color: #C0392B;
+	font-size: 2.8rem;
+}
+h2{
+	font-family:Georgia, Times, serif;
+	font-style:italic;
+	width: 620px; 
+}
+h3{
+	color: #48C3F9;
+}
+
+header {
+	font-family:Georgia, Times, serif;
+	font-size:1.2rem;
+	color: #000000;
+	text-align: center;
+	position:sticky; /*per fixar el header al fer scroll en el body */
+	top:0;		 	 /*per fixar el header a la posició 0 on està establert al fer scroll en el body */
+}
+.menu{
+	position:sticky; /*per fixar el menu de navegació al fer scroll en el body */
+	top:126px;		 /*per fixar el menu de navegació a la posició 126px on està establert al fer scroll en el body */
+}
+ul {
+	margin: 0%;
+}
+
+body > header { /* Per ajuntar dos parts en 1a */
+	background-color: #48C3F9;
+	padding: 10px; 
+	padding-left: 30px;
+	padding-top: 5px;
+}
+
+nav {
+	padding-bottom: 15px;
+	padding-top: 15px;	
+	background-color:#528FD5; /* background-color: #03A9F4;*/
+	overflow:hidden; /*neteja el float left perquè es vegi bé */
+	text-align: center;
+}
+nav li { /* Llista del nav */
+	display: inline;
+}
+
+nav li a {
+   margin:1.5%;
+   color: white;
+   text-decoration: none;
+}
+li a:hover{ /* perque es marqui amb color diferent quan passem pel cim de les opcions del menu */
+	padding-bottom: 15px;
+	padding-top: 15px;
+	background-color:#75ACEC;
+}
+.adrmail:hover{/* perque quan estem pel cim d'email sí que es marqui amb color diferent com l'anterior,però no tingui padding, serà del tamany de la lletra*/
+	padding:0px;
+}
+.logotip img {
+	float: left;
+    width: 90px; /*mida logotip*/
+	border-radius:50%;
+	background-size: cover; /* per fer-li un cercle blau al voltant logo */
+	z-index: 1;				
+    border-style: solid;
+    border-width: 10px;
+    border-color: #03A9F4;
+}
+
+.fotoD img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+    width: 50%; /*mida foto*/
+	border-radius:50%;  /*foto rodona (cercle) */	
+	background-size: cover; /* per fer-li un cercle de 4 colors al voltant foto */
+	z-index: 1;
+    border-style: solid;
+    border-width: 15px;
+    border-color: #03A9F4 #FF5252 #8BC34A #FFCD40;
+}
+.bio {
+	width: 75%;
+	/*margin: 10px; */
+	padding: 20px;
+	background-color: #ffffff;
+}
+.infoPersonal{
+	width: 25%;
+	background-color: #E8E5E3;
+	/* padding-left: 1%;
+	padding-top: 2%;
+	padding-right: 6%;
+	padding-bottom: 20%; 
+	float: left;*/
+	/*padding: 20px TOTS ELS MARGES INTERNS A 20 POTSER LA IMATGE QUEDA CENTRADAAAAAAAAAAA*/
+	padding: 20px 20px 20px 50px; 
+	box-sizing: border-box;
+}
+.telef{
+	list-style: url('./telefon-icon.png');
+}
+.email{
+	list-style: url('./email-icon.png');
+}
+.adreça{
+	list-style: url('./Location-2-icon.png');
+}
+footer {
+	padding: 20px;
+	background-color: #03A9F4;
+	color: black;
+	text-align: center;
+}
+
+#main-content{
+	display:flex;
+}
