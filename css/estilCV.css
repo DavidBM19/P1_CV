@@ -9,13 +9,16 @@ header {
 	display:inline-block;
 	width: 100%;
 	font-family:Georgia, Times, serif;
-	font-size:1.2rem;
+	background: url(../imatges/fons2.png) no-repeat; /*imatge de fons de la capçalera*/
+	background-size:cover;
+	/*font-size:1.2rem;
 	color: #000000;
-	text-align: center;
+	text-align: center;*/
 	position:sticky; /*per fixar el header (titol i menu) al fer scroll en el body */
 	top:0;		 	 /*per fixar el header (titol i menu) a la posició 0 on està establert al fer scroll en el body */
 }
 body{
+	/*zoom: 90%; para que el zoom del navegador visualice al 90% SI HO VOLEMMMMMMMMM*/
 	padding-bottom: 10em;
 	background: lightblue;
 	width: 90%;
@@ -24,14 +27,15 @@ body{
 }
 
 body > header { /* Per ajuntar dos parts en 1 */
-	background-color: #48C3F9;
-	padding: 10px; 
-	padding-left: 30px;
-	padding-top: 5px;
+	/*background-color: #48C3F9;*/	
+	padding: 5px 0px 10px 10px; 
+	/*padding-left: 30px;
+	/*padding-top: 5px;*/
 }
 
 a{
 	text-decoration: none;
+	color: blue;
 }
 
 ul{
@@ -50,6 +54,12 @@ h2{
 h3{
 	color: #48C3F9;
 	line-height: 50px;
+}
+
+.bio ul{
+	list-style:square;
+	padding-left: 15px;
+	color: #48C3F9;
 }
 p{
 	line-height: 30px;
@@ -70,41 +80,79 @@ p{
 	width:20%;
 	padding:30px 0px 0px 55px;
 }
+
 .titol{
 	width: 80%;
-	background: #48C3F9;
+	/*background: #48C3F9;*/
 	height: 125px;
-	/*display: flex;*/
-	/*align-items: center;
-	justify-content: center;*/
+}
+.titol h1 {
+  font-size: 7vmin;
+  /*position: absolute;*/
+  padding-left:550px;
+  padding-top:10px;
+  /*text-shadow: 5px 3px 8px #000; /*SI VOLEM QUE EL TITOL TINGUI UNA OMBRA QUE FACI COM SI FOS EN 3D LLAVORS TREIEM DEL BORDER EL WHITE */
+}
+.border { /* Per definir el borde del titol en blanc amb l'interior negre*/
+  color: white; 
+  position: absolute;  
+  text-shadow:
+    -1px -1px 0 black, 
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;  
 }
 
-.titol h1{
-	color: #C0392B;
-	font-size: 2.8rem;
-	padding-top:20px;
-	/*padding-left:100px;
-	font-weight: 200;
-	text-align: center;*/
+.wave { /* Per definir com serà l'onada del titol amb el seu color i l'animació wave que utilitza que serà de 3 segons i infinita*/
+  color: #09f;
+  animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave { /*definim el moviment de l'onada del titol amb el model de la forma d'un poligon */
+  0%, 100% {
+    clip-path: polygon(
+      0% 47%,
+      10% 48%,
+      33% 54%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(0% 60%,
+    15% 65%,
+    34% 66%,
+    51% 62%,
+    67% 50%,
+    84% 45%,
+    100% 46%,
+    100% 100%,
+    0% 100%
+    );
+  }
 }
 
 .navegacion{
 	width: 100%;
 	background: #528FD5;
-
 	display: flex;
 	justify-content: center;
 	position:sticky; /*per fixar el menu de navegació al fer scroll en el body */
-	top:170px;		 /*per fixar el menu de navegació a la posició 125px on està establert al fer scroll en el body */
+	top:170px;		 /*per fixar el menu de navegació a la posició 170px on està establert al fer scroll en el body */
 }
 
 .menu{
-	width: 1100px;
+	width: 830px;
 	display: flex;
 	flex-wrap: wrap;
-	height: 90px;
+	height: 55px;
 	position:sticky; /*per fixar el menu de navegació al fer scroll en el body */
-	top:170px;		 /*per fixar el menu de navegació a la posició 125px on està establert al fer scroll en el body */
+	top:170px;		 /*per fixar el menu de navegació a la posició 170px on està establert al fer scroll en el body */
 }
 
 .menu li{
@@ -121,10 +169,10 @@ p{
 .menu li a{
 	display: flex;
 	flex-direction: column;
-	font-size: 18px;
+	font-size: 14px;
 }
 
-.menu .imatge{
+.menu .imatge{ 
 	position: absolute;
 	bottom: 0;
 	right: 30px;
@@ -175,7 +223,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
 	position: absolute;
 	top: 0%;
 	width: 100%;
-	height: 90%;
+	/*height: 20%;*/
 	background: #528FD5;
 
 	-webkit-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
@@ -191,7 +239,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
 
 .menu li:hover .down-item, .menu li:hover .text-item{
 	top: 100%;
-	height: 115%;
+	height: 95%;
 }
 
 .menu li:hover .imatge{
@@ -202,23 +250,23 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
 	/*display: block;*/
 	margin-left: auto;
 	margin-right: auto;
-    width: 60%; /*mida foto*/
+    width: 55%; /*mida foto*/
 	border-radius:50%;  /*foto rodona (cercle) */	
 	background-size: cover; /* per fer-li un cercle de 4 colors al voltant foto */
 	z-index: 1;
-    border-style: solid;
-    border-width: 15px;
+    border-style: solid; /*border al voltant de la foto per emmarcar-la amb 4 colors */
+    border-width: 10px;
     border-color: #03A9F4 #FF5252 #8BC34A #FFCD40;
 }
 
 .infoPersonal{
-	width: 30%;
+	width: 25%;
 	background-color: #E8E5E3;
 	box-sizing: border-box;
 }
 
 .fotoD{
-	padding: 40px 0px 0px 130px;
+	padding: 40px 0px 0px 150px;
 	
 }
 .info{
@@ -226,20 +274,30 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
 }
 
 .telef{
-	list-style: url('../icons/telefon_icon2.png');
+	list-style-image: url('../icons/telefon_icon2OK2.png');
+	line-height: 30px;
 }
 .email{
-	list-style: url('../icons/email-icon2.png');
+	list-style-image: url('../icons/email-icon2OK2.png');
+	line-height: 30px;
 }
 .adreça{
-	list-style: url('../icons/location-icon2.png');
+	list-style-image: url('../icons/location-icon2OK2.png');
+	line-height: 30px;
 }
 
 .bio {
-	width: 70%;
+	width: 75%;
 	/*margin: 10px; */
-	padding: 100px 20px 20px 20px;
+	padding: 60px 20px 20px 20px;
 	background-color: #ffffff;
+}
+.imatgefixa{ /*fotografia que s'integra en el menu i que queda entre ell, el header i la resta del body quedant fixe quan fem scroll */
+	position:fixed;
+	padding:10px;
+	margin:-150px 1200px 0px 0px;
+	/*border:2px solid black;*/
+	width:300px;
 }
 
 footer {
