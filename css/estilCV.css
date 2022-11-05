@@ -1,24 +1,18 @@
 *{
 	margin: 0;
 	padding: 0;
-	/*-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;*/
 	box-sizing: border-box;
 }
 header {
 	display:inline-block;
 	width: 100%;
 	font-family:Georgia, Times, serif;
-	background: url(../imatges/fons2.png) no-repeat; /*imatge de fons de la capçalera*/
+	background: url(../imatges/fons.png) no-repeat; /*imatge de fons de la capçalera*/
 	background-size:cover;
-	/*font-size:1.2rem;
-	color: #000000;
-	text-align: center;*/
 	position:sticky; /*per fixar el header (titol i menu) al fer scroll en el body */
 	top:0;		 	 /*per fixar el header (titol i menu) a la posició 0 on està establert al fer scroll en el body */
 }
 body{
-	/*zoom: 90%; para que el zoom del navegador visualice al 90% SI HO VOLEMMMMMMMMM*/
 	font-size: 16px; /* valor per defecte, ho donem com a referència per poder trobar l'escala per transformar px en em (px/16)=em que necessitem*/
 	max-width:100em;
 	padding-bottom: 10em;
@@ -28,11 +22,8 @@ body{
 	margin: 0 auto;
 }
 
-body > header { /* Per ajuntar dos parts en 1 */
-	/*background-color: #48C3F9;*/	
+body > header { /* Per ajuntar dos parts en 1 amb format*/
 	padding: 0.5em 0em 1em 1em; 
-	/*padding-left: 30px;
-	/*padding-top: 5px;*/
 }
 
 a{
@@ -45,101 +36,33 @@ ul{
 }
 
 img{
-	/*max-width: 100%;*/
 	width:100%;
 }
 h2{
 	font-family:Georgia, Times, serif;
 	font-style:italic;
-	/*width: 38.75em; */
 	line-height:2.2em;
 }
 h3{
 	color: #48C3F9;
 	line-height: 2.5em;
 }
-
-.bio ul{
-	list-style:square;
-	padding-left: 1.5em;
-	color: #48C3F9;
-}
 p{
 	line-height: 1.5em;
 }
 
-/*==========================================*/
-/*.logotip img{
-	float: left;
-    width: 8em; mida logotip
-	border-radius:50%;
-	background-size: cover; /* per fer-li un cercle blau al voltant logo 
-	z-index: 1;				
-    border-style: solid;
-    border-width: 0.63em;
-    border-color: #03A9F4;
-}
-.logotip{
-	width:20%;
-	padding:3em 0em 0em 5.5em;
-}*/
-
 .titol{
 	width: 100%;
-	/*background: #48C3F9;*/
 	height: 9.8em;
 }
 .titol h1 {
   font-size: 3.5em;
-  /*position: absolute;*/
-  padding-left:9.2em;
+  /*padding-left:9.2em;*/
+  	text-align: center;
   padding-top:1.1em;
   color: white;
-  text-shadow: 0.1em 0.05em 0.1em #000; /*SI VOLEM QUE EL TITOL TINGUI UNA OMBRA QUE FACI COM SI FOS EN 3D LLAVORS TREIEM DEL BORDER EL WHITE */
+  text-shadow: 0.1em 0.05em 0.1em #000; /*Li posem una ombra al títol per fer-lo semblar en 3D */
 }
-/*.border { /* Per definir el borde del titol en blanc amb l'interior negre
-  color: white; 
-  position: absolute;  
-  text-shadow:
-    -1px -1px 0 black, 
-    1px -1px 0 black,
-    -1px 1px 0 black,
-    1px 1px 0 black;  
-}*/
-
-/* .wave { Per definir com serà l'onada del titol amb el seu color i l'animació wave que utilitza que serà de 3 segons i infinita
-  color: #09f;
-  animation: wave 3s ease-in-out infinite;
-}
-
-@keyframes wave { /*definim el moviment de l'onada del titol amb el model de la forma d'un poligon 
-  0%, 100% {
-    clip-path: polygon(
-      0% 47%,
-      10% 48%,
-      33% 54%,
-      54% 60%,
-      70% 61%,
-      84% 59%,
-      100% 52%,
-      100% 100%,
-      0% 100%
-    );
-  }
-
-  50% {
-    clip-path: polygon(0% 60%,
-    15% 65%,
-    34% 66%,
-    51% 62%,
-    67% 50%,
-    84% 45%,
-    100% 46%,
-    100% 100%,
-    0% 100%
-    );
-  }
-}*/
 
 .navegacion{
 	width: 100%;
@@ -147,7 +70,7 @@ p{
 	display: flex;
 	justify-content: center;
 	position:sticky; /*per fixar el menu de navegació al fer scroll en el body */
-	top:11.3em;		 /*per fixar el menu de navegació a la posició 170px on està establert al fer scroll en el body */
+	top:11.3em;		 /*per fixar el menu de navegació a la posició 11.3em on està establert al fer scroll en el body */
 }
 
 .menu{
@@ -156,7 +79,7 @@ p{
 	flex-wrap: wrap;
 	height: 3.8em;
 	position:sticky; /*per fixar el menu de navegació al fer scroll en el body */
-	top:11.3em;		 /*per fixar el menu de navegació a la posició 170px on està establert al fer scroll en el body */
+	top:11.3em;		 /*per fixar el menu de navegació a la posició 11.3em on està establert al fer scroll en el body */
 }
 
 .menu li{
@@ -227,7 +150,6 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
 	position: absolute;
 	top: 0%;
 	width: 100%;
-	/*height: 20%;*/
 	background: #528FD5;
 
 	-webkit-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
@@ -251,31 +173,14 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
 	right: 0em;
 }
 
-.imatgefixa{ /*fotografia que s'integra en el menu i que queda entre ell, el header i la resta del body quedant fixe quan fem scroll */
-	position:fixed;
-	padding:1em;
-	margin:-9em 75em 0em 0em;
-	/*border:2px solid black;*/
-	width:19%;
+.infoPersonal img{ 
+	width:80%;
 }
-/*.fotoD img {
-	/*display: block;
-	margin-left: auto;
-	margin-right: auto;
-    width: 55%; /*mida foto
-	border-radius:50%;  /*foto rodona (cercle) 	
-	background-size: cover; /* per fer-li un cercle de 4 colors al voltant foto 
-	z-index: 1;
-    border-style: solid; /*border al voltant de la foto per emmarcar-la amb 4 colors 
-    border-width: 0.6em;
-    border-color: #03A9F4 #FF5252 #8BC34A #FFCD40;
-}*/
 
 .infoPersonal{
 	width: 25%;
 	background-color: #E8E5E3;
-	padding: 10em 0em 1em 3.5em; 
-	/*box-sizing: border-box;*/
+	padding: 2em 0em 1em 3.5em; 
 }
 
 .infoPersonal p{
@@ -287,32 +192,62 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
 	text-decoration: underline;
 }
 
-/*.fotoD{
-	padding: 3em 0em 0em 6em;
-	
-}*/
-.info{
-	
-}
-
 .telef{
-	list-style-image: url('../icons/telefon_icon2OK2.png');
+	list-style-image: url('../imatges/telefon_icon.png');
 	line-height: 1.7em;
 }
 .email{
-	list-style-image: url('../icons/email-icon2OK2.png');
+	list-style-image: url('../imatges/email-icon.png');
 	line-height: 1.7em;
 }
 .adreça{
-	list-style-image: url('../icons/location-icon2OK2.png');
+	list-style-image: url('../imatges/location-icon.png');
 	line-height: 1.7em;
 }
 
 .bio {
 	width: 75%;
-	/*margin: 10px; */
 	padding: 4em 2em 2em 3em;
 	background-color: #ffffff;
+}
+
+.bio img{
+	width: 35%;
+	margin: auto;
+	display: block;
+	border: 6px solid #eee;
+	-webkit-box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
+    -moz-box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
+    box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
+}
+.bio .languages {
+	width: 45%;
+	margin: 1em 0em 2em 2em;
+	display: block;
+	box-shadow:none;
+	border: none;
+}
+/*.bio img { /* efecte que al passar el cursor sobre la imatge roti a la dreta 
+    width: 35%;
+	margin: auto;
+	display: block;
+    border: 6px solid #eee;
+    -webkit-box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
+    -moz-box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
+    box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease;
+}
+ 
+.bio img:hover { /* la imatge rota a la dreta 17 deg (si negatiu a l'esquerra) I ES POT MODIFICAR EL NÚMERO QUE ÉS INCLINACIÓ
+    -webkit-transform: rotate(17deg);
+    -moz-transform: rotate(17deg);
+    -o-transform: rotate(17deg);
+}*/
+.bio ul{
+	list-style:square;
+	padding-left: 1.5em;
+	color: #48C3F9;
 }
 
 footer {
@@ -325,88 +260,82 @@ footer {
 #main-content{
 	display:flex; /*visualització de la informació personal i bio un al costat de l'altra */
 }
+
+/*========= DISSENY RESPONSIVE =========*/
 /* Extra large devices (large desktops, 1360px) */
 @media (max-width: 1360px){
 	body{
-		font-size:13px;
+		font-size:13px; /* valor que donem com a referència per poder trobar l'escala per transformar px en la mida em que necessitem*/
 	}
 	.header{
 		font-size:10.5px;
 	}
 	.titol h1 {
-		padding-left:10em;
+		text-align: center;
 		padding-top:0.8em;
 	}
-	.imatgefixa{ /*fotografia que s'integra en el menu i que queda entre ell, el header i la resta del body quedant fixe quan fem scroll */
-	margin:-5em 70em 0em 0em;
-	width:18%;
-	}
 	.navegacion{
-	top:9.1em;		 /*per fixar el menu de navegació a la posició 170px on està establert al fer scroll en el body */
+		top:9.1em;		 /*per fixar el menu de navegació a la posició 9.1em on està establert al fer scroll en el body */
 	}
 	.menu{
-	top:9.1em;		 /*per fixar el menu de navegació a la posició 170px on està establert al fer scroll en el body */
+		top:9.1em;		 /*per fixar el menu de navegació a la posició 9.1em on està establert al fer scroll en el body */
 	}
 }
-/* Large devices (large desktops, 992px and up) */
+/* Large devices (large desktops, 992px) */
 @media (max-width: 992px){
 	body{
-		font-size:11px;
+		font-size:11px; /* valor que donem com a referència per poder trobar l'escala per transformar px en la mida em que necessitem*/
 	}
 	.header{
 		font-size:8.5px;
 	}
 	.titol h1 {
-		padding-left:10em;
+		text-align: center;
 		padding-top:0.8em;
 	}
-	.imatgefixa{ /*fotografia que s'integra en el menu i que queda entre ell, el header i la resta del body quedant fixe quan fem scroll */
-	margin:-3em 65em 0em 0em;
-	width:16%;
-	}
 	.navegacion{
-	top:8.7em;		 /*per fixar el menu de navegació a la posició 170px on està establert al fer scroll en el body */
+		top:8.7em;		 /*per fixar el menu de navegació a la posició 8.7em on està establert al fer scroll en el body */
 	}
 	.menu{
-	top:8.7em;		 /*per fixar el menu de navegació a la posició 170px on està establert al fer scroll en el body */
+		top:8.7em;		 /*per fixar el menu de navegació a la posició 8.7em on està establert al fer scroll en el body */
 	}
 	.infoPersonal{
-		padding: 8em 0em 1em 3em; 
+		padding: 2em 0em 1em 3em; 
 		font-size: 11px;
 	}
 	.infoPersonal h3{ /* tamany del titol Personal Information una mica més gran que per defecte h3 i subrayat */
-	font-size: 1.2em;
-	text-decoration: underline;
+		font-size: 1.2em;
+		text-decoration: underline;
+	}
 }
-}
-/* Medium devices (tablets, 768px and up) */
+/* Medium devices (tablets, 768px) */
 @media (max-width: 768px){
 	body{
-		font-size:9px;
+		font-size:9px; /* valor que donem com a referència per poder trobar l'escala per transformar px en la mida em que necessitem*/
 	}
 	.header{
 		font-size:6.5px;
 	}
 	.titol h1 {
-		padding-left:10em;
+		text-align: center;
 		padding-top:0.7em;
 	}
-	.imatgefixa{ /*fotografia que s'integra en el menu i que queda entre ell, el header i la resta del body quedant fixe quan fem scroll */
-	margin:-3em 64em 0em 0em;
-	width:14%;
+	.infoPersonal img{ 
+		margin:0em 0em 2em 2em;
+		width:40%;
 	}
 	.navegacion{
-	top:8em;		 /*per fixar el menu de navegació a la posició 170px on està establert al fer scroll en el body */
+		top:8.2em;		 /*per fixar el menu de navegació a la posició 8.2em on està establert al fer scroll en el body */
 	}
 	.menu{
-	top:8em;		 /*per fixar el menu de navegació a la posició 170px on està establert al fer scroll en el body */
+		top:8.2em;		 /*per fixar el menu de navegació a la posició 8.2em on està establert al fer scroll en el body */
 	}
 	#main-content{
-	display:block; /*per posar la informació personal i la informació de bio un a sota l'altre i no de costat per visualitzar-se millor */
+		display:block; /*per posar la informació personal i la informació de bio un a sota l'altre i no de costat per visualitzar-se millor */
 	}
 	.infoPersonal{
 		width: 100%;
-		padding: 2em 0em 1em 11em; 
+		padding: 2em 0em 1em 18em; 
 		font-size: 11px;
 	}
 	.bio, footer{
@@ -414,33 +343,33 @@ footer {
 		font-size: 11px;
 	}
 }
-/* Small devices (landscape phones, 576 px and up) */
+/* Small devices (landscape phones, 576 px) */
 @media (max-width: 576px){
 	body{
-		font-size:7px;
+		font-size:7px; /* valor que donem com a referència per poder trobar l'escala per transformar px en la mida em que necessitem*/
 	}
 	.header{
 		font-size:5.5px;
 	}
 	.titol h1 {
-		padding-left:9em;
+		text-align: center;
 		padding-top:0.8em;
 	}
-	.imatgefixa{ /*fotografia que s'integra en el menu i que queda entre ell, el header i la resta del body quedant fixe quan fem scroll */
-	margin:-3em 62em 0em 0em;
-	width:15%;
+	.infoPersonal img{ 
+		margin:0em 0m 2em 2em;
+		
 	}
 	.navegacion{
-	top:8.9em;		 /*per fixar el menu de navegació a la posició 170px on està establert al fer scroll en el body */
+		top:8.9em;		 /*per fixar el menu de navegació a la posició 8.9em on està establert al fer scroll en el body */
 	}
 	.menu{
-	top:8.9em;		 /*per fixar el menu de navegació a la posició 170px on està establert al fer scroll en el body */
+		top:8.9em;		 /*per fixar el menu de navegació a la posició 8.9em on està establert al fer scroll en el body */
 	}
 	#main-content{
-	display:block; /*per posar la informació personal i la informació de bio un a sota l'altre i no de costat per visualitzar-se millor */
+		display:block; /*per posar la informació personal i la informació de bio un a sota l'altre i no de costat per visualitzar-se millor */
 	}
 	.infoPersonal{
-		padding: 2em 0em 1em 8em; 
+		padding: 2em 0em 1em 10em; 
 		width: 100%;
 		font-size: 11px;
 	}
