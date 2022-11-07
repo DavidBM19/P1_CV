@@ -1,3 +1,5 @@
+/* Author: David Bouzas Morales */
+/* CSS styles of David's curriculum vitae */
 *{
 	margin: 0;
 	padding: 0;
@@ -7,13 +9,13 @@ header {
 	display:inline-block;
 	width: 100%;
 	font-family:Georgia, Times, serif;
-	background: url(../imatges/fons.png) no-repeat; /*imatge de fons de la capçalera*/
+	background: url(../imatges/fons.png) no-repeat; /*header background image*/
 	background-size:cover;
-	position:sticky; /*per fixar el header (titol i menu) al fer scroll en el body */
-	top:0;		 	 /*per fixar el header (titol i menu) a la posició 0 on està establert al fer scroll en el body */
+	position:sticky; /*to fix the header (title and menu) when scrolling in the body */
+	top:0;		 	 /*to set the header (title and menu) to position 0 where it is set when scrolling in the body */
 }
 body{
-	font-size: 16px; /* valor per defecte, ho donem com a referència per poder trobar l'escala per transformar px en em (px/16)=em que necessitem*/
+	font-size: 16px; /* default value, we give it as a reference to be able to find the scale to transform px to em (px/16)=em that we need*/
 	max-width:100em;
 	padding-bottom: 10em;
 	background: lightblue;
@@ -22,7 +24,7 @@ body{
 	margin: 0 auto;
 }
 
-body > header { /* Per ajuntar dos parts en 1 amb format*/
+body > header { /* To join two parts into 1 with format*/
 	padding: 0.5em 0em 1em 1em; 
 }
 
@@ -47,21 +49,42 @@ h3{
 	color: #48C3F9;
 	line-height: 2.5em;
 }
+h4{ /*title skills*/
+	font-family:Georgia, Times, serif;
+	font-size: 1.7em;
+	color:#104AF0 ;
+	font-style:italic;
+	line-height:2em;
+	text-decoration: underline;
+	text-shadow: 0.03em 0.03em 0.03em #000;
+}
 p{
 	line-height: 1.5em;
 }
-
+.logotip img{
+	float: left;
+    width: 70%; /*logo size*/
+	border-radius:50%;
+	background-size: cover; /* to make a blue circle around the logo */
+	z-index: 1;				
+    border-style: solid;
+    border-width: 0.8em;
+    border-color: #03A9F4;
+}
+.logotip{
+	width:20%;
+	padding:1.3em 0em 0em 7em;
+}
 .titol{
-	width: 100%;
-	height: 9.8em;
+	width: 80%;
+	height: 9.5em;
 }
 .titol h1 {
-  font-size: 3.5em;
-  /*padding-left:9.2em;*/
-  	text-align: center;
-  padding-top:1.1em;
-  color: white;
-  text-shadow: 0.1em 0.05em 0.1em #000; /*Li posem una ombra al títol per fer-lo semblar en 3D */
+	font-size: 3.5em;
+	text-align: center;
+	padding-top:0.8em;
+	color: white;
+	text-shadow: 0.1em 0.05em 0.1em #000; /*We drop a shadow on the title to make it look 3D */
 }
 
 .navegacion{
@@ -69,8 +92,8 @@ p{
 	background: #528FD5;
 	display: flex;
 	justify-content: center;
-	position:sticky; /*per fixar el menu de navegació al fer scroll en el body */
-	top:11.3em;		 /*per fixar el menu de navegació a la posició 11.3em on està establert al fer scroll en el body */
+	position:sticky; /*to fix the navigation menu when scrolling in the body */
+	top:12.3em;		 /*to set the navigation menu to the 12.3em position where it is set when scrolling in the body */
 }
 
 .menu{
@@ -78,19 +101,19 @@ p{
 	display: flex;
 	flex-wrap: wrap;
 	height: 3.8em;
-	position:sticky; /*per fixar el menu de navegació al fer scroll en el body */
-	top:11.3em;		 /*per fixar el menu de navegació a la posició 11.3em on està establert al fer scroll en el body */
+	position:sticky; /*to fix the navigation menu when scrolling in the body */
+	top:12.3em;		 /*to set the navigation menu to the 12.3em position where it is set when scrolling in the body */
 }
 
 .menu li{
 	flex-basis: 0;
 	flex-grow: 1;
-	border-right: 0.1em solid #363636;
+	border-right: 0.1em solid #363636; /* to put a small border to the right of the menu to distinguish one option from another */
 	position: relative;
 }
 
 .menu .first-item{
-	border-left: 0.1em solid #363636;
+	border-left: 0.1em solid #363636; /* to put a small border to the left of the first item of menu */
 }
 
 .menu li a{
@@ -99,7 +122,7 @@ p{
 	font-size: 0.8em;
 }
 
-.menu .imatge{ 
+.menu .imatge{  /* type of transition used when displaying the menu image when hovering over the option */
 	position: absolute;
 	bottom: 0;
 	right: 3em;
@@ -121,7 +144,7 @@ p{
 box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
 }
 
-.menu li a .text-item{
+.menu li a .text-item{ /* type of transition used when displaying the text of the option of menu when hovering over the option */
 	width: 100%;
 	height: 90%;
 	display: flex;
@@ -146,7 +169,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
         transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
 }
 
-.menu li a .down-item{
+.menu li a .down-item{ /* type of transition used when displaying the text down of the option of menu when hovering over the option */
 	position: absolute;
 	top: 0%;
 	width: 100%;
@@ -187,7 +210,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
 	line-height: 2.2em;
 }
 
-.infoPersonal h3{ /* tamany del titol Personal Information una mica més gran que per defecte h3 i subrayat */
+.infoPersonal h3{ /* size of the Personal Information title slightly larger than the default h3 and underlined */
 	font-size: 1.5em;
 	text-decoration: underline;
 }
@@ -220,30 +243,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
     -moz-box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
     box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
 }
-.bio .languages {
-	width: 45%;
-	margin: 1em 0em 2em 2em;
-	display: block;
-	box-shadow:none;
-	border: none;
-}
-/*.bio img { /* efecte que al passar el cursor sobre la imatge roti a la dreta 
-    width: 35%;
-	margin: auto;
-	display: block;
-    border: 6px solid #eee;
-    -webkit-box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
-    -moz-box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
-    box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease;
-}
- 
-.bio img:hover { /* la imatge rota a la dreta 17 deg (si negatiu a l'esquerra) I ES POT MODIFICAR EL NÚMERO QUE ÉS INCLINACIÓ
-    -webkit-transform: rotate(17deg);
-    -moz-transform: rotate(17deg);
-    -o-transform: rotate(17deg);
-}*/
+
 .bio ul{
 	list-style:square;
 	padding-left: 1.5em;
@@ -258,85 +258,262 @@ footer {
 }
 
 #main-content{
-	display:flex; /*visualització de la informació personal i bio un al costat de l'altra */
+	display:flex; /*viewing personal and bio information side by side */
 }
 
-/*========= DISSENY RESPONSIVE =========*/
-/* Extra large devices (large desktops, 1360px) */
-@media (max-width: 1360px){
+/* CONTAINER OF LANGUAGE BARS SKILLS*/
+.container-father{
+	width: 40%;
+	min-width: 5em;
+	float:left;
+	margin:2em;
+}
+.container{
+	width:100%;
+	padding:20px 20px 30px;
+	background:linear-gradient(450deg,blue,darkblue);
+	border: 2px solid rgba(0, 0, 0, 0.06);
+	border-radius:10px;
+	box-shadow:0 px 30px rgba(0, 0, 0, 0.02);
+}
+.container h2{
+	color: orange;
+}
+.container *{
+	color:whitesmoke;
+}
+
+.skills:not(:last-child){
+	margin-bottom: 1em;
+}
+.details{
+	width: 100%;
+	display:flex;
+	justify-content: space-between;
+	margin-bottom:3px;
+}
+.menu-bar{
+	position:relative;
+	border:0.5px solid cyan;
+	border-radius:20px;
+}
+.menu-bar div{
+	position:relative;
+	width:0;
+	height:5px;
+	border-radius:10px;
+	background-color:cyan;
+}
+/*ANIMATION BARS OF LANGUAGES SKILLS*/
+#listening-menuEnglish{
+	animation:listening-barraEnglish 2s forwards;
+}
+@keyframes listening-barraEnglish{
+	100%{
+		width: 85%;
+	}
+}
+#reading-menuEnglish{
+	animation:reading-barraEnglish 2s forwards;
+}
+@keyframes reading-barraEnglish{
+	100%{
+		width: 85%;
+	}
+}
+#spoken-menuEnglish{
+	animation:spoken-barraEnglish 2s forwards;
+}
+@keyframes spoken-barraEnglish{
+	100%{
+		width: 85%;
+	}
+}
+#writing-menuEnglish{
+	animation:writing-barraEnglish 2s forwards;
+}
+@keyframes writing-barraEnglish{
+	100%{
+		width: 85%;
+	}
+}
+
+#listening-menuFrench{
+	animation:listening-barraFrench 2s forwards;
+}
+@keyframes listening-barraFrench{
+	100%{
+		width: 50%;
+	}
+}
+#reading-menuFrench{
+	animation:reading-barraFrench 2s forwards;
+}
+@keyframes reading-barraFrench{
+	100%{
+		width: 50%;
+	}
+}
+#spoken-menuFrench{
+	animation:spoken-barraFrench 2s forwards;
+}
+@keyframes spoken-barraFrench{
+	100%{
+		width: 50%;
+	}
+}
+#writing-menuFrench{
+	animation:writing-barraFrench 2s forwards;
+}
+@keyframes writing-barraFrench{
+	100%{
+		width: 50%;
+	}
+}
+table{ /* DIGITAL SKILLS */
+	margin: 2em;
+	border-collapse: collapse; /*merge table borders*/
+	border: 2px solid #2D0883;
+	font-family: Calibri;
+}
+th,td{
+	padding: 1em;
+	font-size: 1.3em;
+}
+th{
+	background-color: #20C1E5;
+	color: #FFFFFF;
+	text-align: left;
+	width: 14em;
+	border: 2px solid #2D0883;
+}
+td{
+	text-align:left;
+	border-bottom: 2px solid #2D0883;
+	color: #2D0883;	
+}
+/*============== RESPONSIVE DESIGN =============*/
+/* Extra large devices (large desktops, between 993px and 1360px) */
+@media (min-width: 993px) and (max-width: 1360px){
 	body{
-		font-size:13px; /* valor que donem com a referència per poder trobar l'escala per transformar px en la mida em que necessitem*/
+		font-size:13px; /* value we give as a reference to be able to find the scale to transform px into the em size we need */
 	}
 	.header{
 		font-size:10.5px;
 	}
+	.logotip img{
+		float: left;
+		width: 75%; /*logo size*/
+		border-radius:50%;
+		background-size: cover; /* to make a blue circle around the logo */
+		z-index: 1;				
+		border-style: solid;
+		border-width: 0.8em;
+		border-color: #03A9F4;
+	}
+	.logotip{
+		width:20%;
+		padding:1em 0em 0em 10em;
+	}
 	.titol h1 {
-		text-align: center;
 		padding-top:0.8em;
 	}
 	.navegacion{
-		top:9.1em;		 /*per fixar el menu de navegació a la posició 9.1em on està establert al fer scroll en el body */
+		top:9.7em;		 /*to set the navigation menu to the 9.7em position where it is set when scrolling in the body */
 	}
 	.menu{
-		top:9.1em;		 /*per fixar el menu de navegació a la posició 9.1em on està establert al fer scroll en el body */
+		top:9.7em;		 /*to set the navigation menu to the 9.7em position where it is set when scrolling in the body */
+	}
+	h4{
+		font-size: 1.6em;
+	}
+	th,td{
+		font-size: 16px;
 	}
 }
-/* Large devices (large desktops, 992px) */
-@media (max-width: 992px){
+/* Large devices (large desktops, between 769px and 992px) */
+@media (min-width: 769px) and (max-width: 992px){
 	body{
-		font-size:11px; /* valor que donem com a referència per poder trobar l'escala per transformar px en la mida em que necessitem*/
+		font-size:11px; /* value we give as a reference to be able to find the scale to transform px into the em size we need */
 	}
 	.header{
 		font-size:8.5px;
 	}
+	.logotip img{
+		width: 73%; /*logo size*/
+	}
+	.logotip{
+		padding:0.8em 0em 0em 8em;
+	}
 	.titol h1 {
-		text-align: center;
 		padding-top:0.8em;
 	}
 	.navegacion{
-		top:8.7em;		 /*per fixar el menu de navegació a la posició 8.7em on està establert al fer scroll en el body */
+		top:9.1em;		 /*to set the navigation menu to the position 9.1em where it is set when scrolling in the body */
 	}
 	.menu{
-		top:8.7em;		 /*per fixar el menu de navegació a la posició 8.7em on està establert al fer scroll en el body */
+		top:9.1em;		 /*to set the navigation menu to the position 9.1em where it is set when scrolling in the body */
 	}
 	.infoPersonal{
 		padding: 2em 0em 1em 3em; 
 		font-size: 11px;
 	}
-	.infoPersonal h3{ /* tamany del titol Personal Information una mica més gran que per defecte h3 i subrayat */
+	.infoPersonal h3{ /* size of the Personal Information title slightly larger than the default h3 and underlined */
 		font-size: 1.2em;
 		text-decoration: underline;
 	}
+	h4{
+		font-size: 1.6em;
+	}
+	th,td{
+		font-size: 14px;
+	}
 }
-/* Medium devices (tablets, 768px) */
-@media (max-width: 768px){
+/* Medium devices (tablets, between 577px and 768px) */
+@media (min-width: 577px) and (max-width: 768px){
 	body{
-		font-size:9px; /* valor que donem com a referència per poder trobar l'escala per transformar px en la mida em que necessitem*/
+		font-size:9px; /* value we give as a reference to be able to find the scale to transform px into the em size we need*/
 	}
 	.header{
 		font-size:6.5px;
 	}
-	.titol h1 {
-		text-align: center;
-		padding-top:0.7em;
+	.logotip img{
+		width: 75%; /*logo size*/
 	}
-	.infoPersonal img{ 
-		margin:0em 0em 2em 2em;
-		width:40%;
+	.logotip{
+		padding:0.8em 0em 0em 7.8em;
+	}
+	.titol h1 {
+		padding-top:0.6em;
 	}
 	.navegacion{
-		top:8.2em;		 /*per fixar el menu de navegació a la posició 8.2em on està establert al fer scroll en el body */
+		top:8.5em;		 /*to set the navigation menu to the 8.5em position where it is set when scrolling in the body */
 	}
 	.menu{
-		top:8.2em;		 /*per fixar el menu de navegació a la posició 8.2em on està establert al fer scroll en el body */
+		top:8.5em;		 /*to set the navigation menu to the 8.5em position where it is set when scrolling in the body */
 	}
 	#main-content{
-		display:block; /*per posar la informació personal i la informació de bio un a sota l'altre i no de costat per visualitzar-se millor */
+		display:block; /*to put personal information and bio information below each other and not side by side for better viewing */
+	}
+	.infoPersonal img{ 
+		margin:0em 0em 2em 5em;
+		width:35%;
 	}
 	.infoPersonal{
 		width: 100%;
 		padding: 2em 0em 1em 18em; 
 		font-size: 11px;
+	}
+	h4{
+		font-size: 1.5em;
+	}
+	.container-father{
+		float:none;
+		width: 60%;
+		margin-left: 8em;
+	}
+	th,td{
+		font-size: 14px;
 	}
 	.bio, footer{
 		width: 100%;
@@ -346,32 +523,49 @@ footer {
 /* Small devices (landscape phones, 576 px) */
 @media (max-width: 576px){
 	body{
-		font-size:7px; /* valor que donem com a referència per poder trobar l'escala per transformar px en la mida em que necessitem*/
+		font-size:7px; /* value we give as a reference to be able to find the scale to transform px into the em size we need*/
 	}
 	.header{
 		font-size:5.5px;
 	}
-	.titol h1 {
-		text-align: center;
-		padding-top:0.8em;
+	.logotip img{
+		width: 70%; /*logo size*/
+	
 	}
-	.infoPersonal img{ 
-		margin:0em 0m 2em 2em;
-		
+	.logotip{
+		padding:1em 0em 0em 7.2em;
+	}
+	.titol h1 {
+		padding-top:0.5em;
 	}
 	.navegacion{
-		top:8.9em;		 /*per fixar el menu de navegació a la posició 8.9em on està establert al fer scroll en el body */
+		top:9.4em;		 /*to set the navigation menu to the 9.4em position where it is set when scrolling in the body */
 	}
 	.menu{
-		top:8.9em;		 /*per fixar el menu de navegació a la posició 8.9em on està establert al fer scroll en el body */
+		top:9.4em;		 /*to set the navigation menu to the 9.4em position where it is set when scrolling in the body */
 	}
 	#main-content{
-		display:block; /*per posar la informació personal i la informació de bio un a sota l'altre i no de costat per visualitzar-se millor */
+		display:block; /*to put personal information and bio information below each other and not side by side for better viewing */
+	}
+	.infoPersonal img{ 
+		margin:0em 0em 2em 7em;
+		width:30%;	
 	}
 	.infoPersonal{
 		padding: 2em 0em 1em 10em; 
 		width: 100%;
 		font-size: 11px;
+	}
+	h4{
+		font-size: 1.4em;
+	}
+	.container-father{
+		float:none;
+		width: 70%;
+		margin-left: 5em;
+	}
+	th,td{
+		font-size: 12px;
 	}
 	.bio, footer{
 		width: 100%;
