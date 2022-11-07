@@ -29,7 +29,7 @@ https://www.figma.com/file/q49DUCWIALPYln5sX73rX2/Design_CV_final_OK
 
 ## - Code of the website:
 
-My project, with the repository name GitHub includes a README.md file, 8 html files (including the index.html homepage, as well as one for each menu option). It also includes a css directory with the styleCV.css file that contains the styles I use in all the format I give to my Web. In addition, it has 3 more directories, imatges (containing all the images used necessary), pdf (with my resume in this format) and figma (with my initial design and the final design of my curriculum vitae webside).
+My project, with the repository name GitHub includes a README.md file, 8 html files (including the index.html homepage, as well as one for each menu option). It also includes a _css directory_ with the styleCV.css file that contains the styles I use in all the format I give to my Web. In addition, it has 3 more directories, _imatges_ (containing all the images used necessary),_pdf_ (with my resume in this format) and _figma_ (with my initial design and the final design of my curriculum vitae webside).
 
 ## - Public link on Github Pages:
 
