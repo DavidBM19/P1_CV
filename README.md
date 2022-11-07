@@ -3,6 +3,7 @@
 ## - Analysis of the project:
 
 __1.  Target user profile__
+
 The profile of the user to whom my website is addressed is for the human resources staff and department heads of any small, medium, large or even multinational company. 
 
 Initially I thought the structure of my resume on the website would be on a single page. But when analysing what information was needed, I thought it was better to separate it by sections, so that depending on the user who consulted it could be more interested in one information than another and access it directly. For example, a human resources technician might be more interested in academic and personal information, however a head of department might focus on work experience and specialization of specific aspects according to the profile of worker you are looking for.
